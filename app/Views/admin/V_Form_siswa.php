@@ -29,52 +29,58 @@
                     <strong>Perhatian !</strong> Harap teliti dalam pengisian data siswa/i. Isilah data sesuai dengan
                     inputan yang tersedia dalam formulir tambah data siswa
                 </div>
-
                 <form action="<?= site_url('siswa/simpan_siswa/') . encrypt_url($status_form); ?>" method="POST" enctype="multipart/form-data" data-parsley-validate="">
                     <?= csrf_field(); ?>
                     <div class="row row-sm">
                         <div class="col-lg-6">
                             <div class="form-group">
                                 <label class="form-label">NISN <span class="tx-danger">*</span></label>
-                                <input class="form-control" name="NISN" placeholder="NISN" required autocomplete="off" type="text" maxlength="20">
+                                <input class="form-control" name="NISN" value="<?= $dt_siswa['NISN']; ?>" placeholder="NISN" required autocomplete="off" type="text" maxlength="20">
                             </div>
                             <div class="form-group">
                                 <label class="form-label">Nama <span class="tx-danger">*</span></label>
-                                <input class="form-control" name="Nama" placeholder="Nama Lengkap" required autocomplete="off" type="text" maxlength="35">
+                                <input class="form-control" name="Nama" value="<?= $dt_siswa['Nama']; ?>" placeholder="Nama Lengkap" required autocomplete="off" type="text" maxlength="35">
                             </div>
                             <div class="form-group">
                                 <label class="form-label">Tempat Lahir <span class="tx-danger">*</span></label>
-                                <input class="form-control" name="TempatLahir" placeholder="Tempat Lahir" required autocomplete="off" type="text" maxlength="100">
+                                <input class="form-control" name="TempatLahir" value="<?= $dt_siswa['TempatLahir']; ?>" placeholder="Tempat Lahir" required autocomplete="off" type="text" maxlength="100">
                             </div>
                             <div class="form-group">
                                 <label class="form-label">Tanggal Lahir <span class="tx-danger">*</span></label>
-                                <input class="form-control" placeholder="Tanggal Lahir" type="text" id="datepicker-date" autocomplete="off" name="TanggalLahir" required>
+                                <input class="form-control" placeholder="Tanggal Lahir" value="<?= $dt_siswa['TanggalLahir']; ?>" type="text" id="datepicker-date" autocomplete="off" name="TanggalLahir" required>
                             </div>
                             <div class="form-group">
                                 <label class="form-label">Jenis Kelamin <span class="tx-danger">*</span></label>
                                 <select name="JenisKelamin" class="form-control" required>
                                     <option value="">-- Pilih Jenis Kelamin-- </option>
-                                    <option value="LK">Laki-Laki</option>
-                                    <option value="PR">Perempuan</option>
+                                    <option value="LK" <?= ($dt_siswa['JenisKelamin'] == 'LK') ? 'selected' : ''; ?>>
+                                        Laki-Laki</option>
+                                    <option value="PR" <?= ($dt_siswa['JenisKelamin'] == 'PR') ? 'selected' : ''; ?>>
+                                        Perempuan</option>
                                 </select>
                             </div>
                             <div class="form-group">
                                 <label class="form-label">Agama <span class="tx-danger">*</span></label>
                                 <select name="Agama" class="form-control select2" required>
                                     <option label="-- Pilih Agama --"></option>
-                                    <option value="Islam">Islam</option>
-                                    <option value="Protestan">Protestan</option>
-                                    <option value="Khatolik">Khatolik</option>
-                                    <option value="Budha">Budha</option>
-                                    <option value="Hindu">Hindu</option>
-                                    <option value="Konghucu">Konghucu</option>
+                                    <option value="Islam" <?= $dt_siswa['Agama'] == 'Islam' ? 'selected' : ''; ?>>Islam
+                                    </option>
+                                    <option value="Protestan" <?= $dt_siswa['Agama'] == 'Protestan' ? 'selected' : ''; ?>>Protestan</option>
+                                    <option value="Khatolik" <?= $dt_siswa['Agama'] == 'Khatolik' ? 'selected' : ''; ?>>
+                                        Khatolik</option>
+                                    <option value="Budha" <?= $dt_siswa['Agama'] == 'Budha' ? 'selected' : ''; ?>>Budha
+                                    </option>
+                                    <option value="Hindu" <?= $dt_siswa['Agama'] == 'Hindu' ? 'selected' : ''; ?>>Hindu
+                                    </option>
+                                    <option value="Konghucu" <?= $dt_siswa['Agama'] == 'Konghucu' ? 'selected' : ''; ?>>
+                                        Konghucu</option>
                                 </select>
                             </div>
                         </div>
                         <div class="col-lg-6">
                             <div class="form-group">
                                 <label class="form-label">Alamat <span class="tx-danger">*</span></label>
-                                <textarea name="Alamat" style="height: 198px;" class="form-control" required autocomplete="off"></textarea>
+                                <textarea name="Alamat" style="height: 198px;" class="form-control" required autocomplete="off"><?= $dt_siswa['Alamat']; ?></textarea>
                             </div>
                             <div class="form-group">
                                 <label class="form-label">Kelas <span class="tx-danger">*</span></label>
@@ -83,7 +89,8 @@
                                     <?php
                                     foreach ($kelas as $dt_kelas) {
                                     ?>
-                                        <option value="<?= $dt_kelas['IDKelas']; ?>"><?= $dt_kelas['Kelas']; ?></option>
+                                        <option value="<?= $dt_kelas['IDKelas']; ?>" <?= ($dt_siswa['Kelas'] == $dt_kelas['IDKelas']) ? 'selected' : ''; ?>>
+                                            <?= $dt_kelas['Kelas']; ?></option>
                                     <?php
                                     }
                                     ?>
@@ -96,7 +103,8 @@
                                     <?php
                                     foreach ($jurusan as $dt_jurusan) {
                                     ?>
-                                        <option value="<?= $dt_jurusan['IDJurusan']; ?>"><?= $dt_jurusan['Jurusan']; ?>
+                                        <option value="<?= $dt_jurusan['IDJurusan']; ?>" <?= ($dt_jurusan['IDJurusan'] == $dt_siswa['Jurusan']) ? 'selected' : ''; ?>>
+                                            <?= $dt_jurusan['Jurusan']; ?>
                                         </option>
                                     <?php
                                     }
@@ -108,7 +116,7 @@
                                 <select name="TahunAjaran" class="form-control select2" required>
                                     <option label="-- Pilih Tahun --"></option>
                                     <?php foreach ($tahun_ajaran as $dt_tahun_ajaran) : ?>
-                                        <option value="<?= $dt_tahun_ajaran['IDTahunAjaran']; ?>">
+                                        <option value="<?= $dt_tahun_ajaran['IDTahunAjaran']; ?>" <?= ($dt_siswa['TahunAjaran'] == $dt_tahun_ajaran['IDTahunAjaran']) ? 'selected' : ''; ?>>
                                             <?= $dt_tahun_ajaran['TahunAjaran']; ?></option>
                                     <?php endforeach; ?>
                                 </select>

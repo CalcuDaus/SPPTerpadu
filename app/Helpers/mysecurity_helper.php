@@ -50,3 +50,11 @@ function decrypt_url($string)
     $output = openssl_decrypt(base64_decode($string), $encrypt_method, $key, 0, $iv);
     return $output;
 }
+
+function date_change($string)
+{
+    $konversi1 = explode("-", $string);
+    $tanggalphp1 = array($konversi1[2], $konversi1[1], $konversi1[0]);
+    $output = implode("-", $tanggalphp1);
+    return $output;
+}

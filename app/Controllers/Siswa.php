@@ -48,8 +48,33 @@ class Siswa extends BaseController
     {
         if (decrypt_url($parameter) == 'Tambah') {
             $status_form = 'Tambah';
+            $dt_siswa = array(
+                'NISN' => '',
+                'Nama' => '',
+                'TempatLahir' => '',
+                'TanggalLahir' => '',
+                'JenisKelamin' => '',
+                'Agama' => '',
+                'Alamat' => '',
+                'Kelas' => '',
+                'Jurusan' => '',
+                'TahunAjaran' => ''
+            );
         } elseif (decrypt_url($parameter) == 'Perbarui') {
             $status_form = 'Perbarui';
+            $cari_siswa = $this->MSiswa->find(decrypt_url($nisn));
+            $dt_siswa = array(
+                'NISN' => $cari_siswa['NISN'],
+                'Nama' => $cari_siswa['Nama'],
+                'TempatLahir' => $cari_siswa['TempatLahir'],
+                'TanggalLahir' => $cari_siswa['TanggalLahir'],
+                'JenisKelamin' => $cari_siswa['JenisKelamin'],
+                'Agama' => $cari_siswa['Agama'],
+                'Alamat' => $cari_siswa['Alamat'],
+                'Kelas' => $cari_siswa['IDKelas'],
+                'Jurusan' => $cari_siswa['IDJurusan'],
+                'TahunAjaran' => $cari_siswa['IDTahunAjaran']
+            );
         } else {
             return redirect()->to(site_url('siswa/data_siswa'));
         }
@@ -58,7 +83,8 @@ class Siswa extends BaseController
             'status_form' => $status_form,
             'kelas' => $this->MKelas->orderBy('Kelas', 'ASC')->findAll(),
             'jurusan' => $this->MJurusan->orderBy('Jurusan', 'ASC')->findAll(),
-            'tahun_ajaran' => $this->MTahunAjaran->orderBy('TahunAjaran', 'ASC')->findAll()
+            'tahun_ajaran' => $this->MTahunAjaran->orderBy('TahunAjaran', 'ASC')->findAll(),
+            'dt_siswa' => $dt_siswa
         );
         return view('/admin/V_Form_siswa', $data);
     }
@@ -84,15 +110,13 @@ class Siswa extends BaseController
             // buat sebuah variabel untuk menampung inputan pengguna 
             if (decrypt_url($parameter) == 'Tambah') {
                 // jika parameter post merupakan tambah 
-                $konversi1 = explode("-", encode_php_tags(htmlentities($this->request->getVar('TanggalLahir'))));
-                $tanggalphp1 = array($konversi1[2], $konversi1[0], $konversi1[1]);
-                $tanggal_lahir = implode("-", $tanggalphp1);
+
 
                 $parameters = array(
                     'NISN' => encode_php_tags(htmlentities($this->request->getVar('NISN'))),
                     'Nama' => encode_php_tags(htmlentities($this->request->getVar('Nama'))),
                     'TempatLahir' => encode_php_tags(htmlentities($this->request->getVar('TempatLahir'))),
-                    'TanggalLahir' => $tanggal_lahir,
+                    'TanggalLahir' => date_change(encode_php_tags(htmlentities($this->request->getVar('TanggalLahir')))),
                     'JenisKelamin' => encode_php_tags(htmlentities($this->request->getVar('JenisKelamin'))),
                     'Agama' => encode_php_tags(htmlentities($this->request->getVar('Agama'))),
                     'Alamat' => encode_php_tags(htmlentities($this->request->getVar('Alamat'))),
@@ -205,11 +229,12 @@ class Siswa extends BaseController
 
     public function detil_siswa($parameter = null)
     {
-        $data = array('session' => \Config\Services::session());
+        $data = array(
+            'session' => \Config\Services::session(),
+            'dt_siswa' => $this->MSiswa->join('t_kelas', 't_kelas.IDKelas = t_siswa.IDKelas', 'left')->join('t_jurusan', 't_jurusan.IDJurusan = t_siswa.IDJurusan', 'left')->join('t_tahun_ajaran', 't_tahun_ajaran.IDTahunAjaran = t_siswa.IDTahunAjaran', 'left')->find(decrypt_url($parameter))
+        );
         return view('/admin/V_Detil_siswa', $data);
     }
-
-
     // Kelola data kelas
 
     public function data_kelas()
@@ -673,5 +698,18 @@ class Siswa extends BaseController
             // Arahkan halaman website jika tidak valid
             return redirect()->to(site_url('siswa/data_tahun_ajaran'));
         }
+    }
+    public function hapus_tahun_ajaran($parameter = null)
+    {
+        $this->MTahunAjaran->delete(decrypt_url($parameter));
+        // simpan aktivitas pengguna 
+        $aktivitas = '[Info] :' . $this->session->get('NamaLengkap') . ' Telah Menghapus Tahun Ajaran Pada Tanggal ' . date('d-F-Y H:i:s');
+        $logs = array(
+            'IDAkunAdmin' => $this->session->get('IDAkunAdmin'),
+            'Waktu' => date('Y-m-d H:i:s'),
+            'Aktivitas' => $aktivitas
+        );
+        $this->MLogs->insert($logs);
+        return redirect()->to(site_url('siswa/data_tahun_ajaran'));
     }
 }

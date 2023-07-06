@@ -37,18 +37,34 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td>A09935</td>
-                                <td>20324242</td>
-                                <td>qori</td>
-                                <td><span class="badge bg-success"><i class="fa fa-user"></i> Aktif</span></td>
-                                <td>
-                                    <a href="" title="Blokir" class="btn btn-warning btn-sm"><i class="fa fa-lock"></i></a>
-                                    <a href="" title="Edit" class="btn btn-secondary btn-sm"><i class="fa fa-pencil"></i></a>
-                                    <a href="" title="Hapus" class="btn btn-danger btn-sm"><i class="fa fa-times"></i></a>
-                                </td>
-                            </tr>
+                            <?php
+                            $no = 1;
+                            foreach ($akun_siswa as $dt_akun) :
+                            ?>
+                                <tr>
+                                    <td><?= $no++; ?></td>
+                                    <td><?= $dt_akun['IDAkun']; ?></td>
+                                    <td><?= $dt_akun['NISN']; ?></td>
+                                    <td><?= $dt_akun['NamaPengguna']; ?></td>
+                                    <?php
+                                    if ($dt_akun['Aktivasi'] == 'Y') {
+                                        $color = 'success';
+                                        $teks = 'Aktif';
+                                    } else {
+                                        $color = 'danger';
+                                        $teks = 'Blokir';
+                                    }
+                                    ?>
+                                    <td><span class="badge bg-<?= $color; ?>"><i class="fa fa-user"></i>
+                                            <?= $teks; ?></span>
+                                    </td>
+                                    <td>
+                                        <a href="<?= site_url('pengguna/blokir_pengguna/') . encrypt_url($dt_akun['IDAkun']); ?>" title="Blokir" class="btn btn-warning btn-sm"><i class="fa fa-lock"></i></a>
+                                        <a href="<?= site_url('pengguna/form_akun_siswa/') . encrypt_url('Perbarui') . '/' . encrypt_url($dt_akun['IDAkun']); ?>" title="Edit" class="btn btn-secondary btn-sm"><i class="fa fa-pencil"></i></a>
+                                        <a href="" title="Hapus" class="btn btn-danger btn-sm"><i class="fa fa-times"></i></a>
+                                    </td>
+                                </tr>
+                            <?php endforeach; ?>
                         </tbody>
                     </table>
                 </div>

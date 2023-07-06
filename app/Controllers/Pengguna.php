@@ -26,12 +26,6 @@ class Pengguna extends BaseController
         $this->MLogs = new LogsModel();
         $this->MPengguna = new PenggunaModel();
     }
-
-    public function akun_siswa()
-    {
-        return view('admin/V_Data_akun_siswa', ['session' => \Config\Services::session()]);
-    }
-
     public function akun_administrator()
     {
         $data = array(
@@ -86,6 +80,16 @@ class Pengguna extends BaseController
         );
         return view('/admin/V_Form_akun_administrator', $data);
     }
+
+    // Kelola Akun Siswa
+    public function akun_siswa()
+    {
+        $data = array(
+            'akun_siswa' => $this->MPengguna->orderBy('IDAkun', 'ASC')->findAll(),
+            'session' => \Config\Services::session()
+        );
+        return view('admin/V_Data_akun_siswa', $data);
+    }
     public function form_akun_siswa($parameter = null, $idsiswa = null)
     {
         if (decrypt_url($parameter) == 'Tambah') {
@@ -97,6 +101,26 @@ class Pengguna extends BaseController
                 'KataSandi' => '',
                 'Aktivasi' => ''
             );
+        } elseif (decrypt_url($parameter) == 'Perbarui') {
+            $status_form = 'Perbarui';
+            $cari_akun_siswa = $this->MPengguna->find(decrypt_url($idsiswa));
+            $dt_akun_siswa = array(
+                'IDAkun' => $cari_akun_siswa['IDAkun'],
+                'NISN' => $cari_akun_siswa['NISN'],
+                'NamaPengguna' => $cari_akun_siswa['NamaPengguna'],
+                'KataSandi' => $cari_akun_siswa['KataSandi'],
+                'Aktivasi' => $cari_akun_siswa['Aktivasi']
+            );
+        } else {
+            $this->session->setFlashdata('pesan', '<script>window.onload = function() {
+                swal({
+                    title: "Data Akun Siswa",
+                    text: "Parameter Tidak Valid !",
+                    type: "error",
+                    confirmButtonColor: "#57a94f"
+                });
+            }</script>');
+            return redirect()->to(site_url('pengguna/akun_siswa'));
         }
         $data = array(
             'status_form' => $status_form,
@@ -169,18 +193,16 @@ class Pengguna extends BaseController
                 );
                 // Simpan Logs Aktivitas kedalam database
                 $this->MLogs->insert($logs);
-                $this->session->setFlashdata('pesan', '
-                <script>window.onload = function() {
+                $this->session->setFlashdata('pesan', '<script>window.onload = function() {
                     swal({
-                        title: "Data Pengguna",
-                        text: "Data Pengguna Berhasil Disimpan !",
-                        type: "Success",
+                        title: "Data Akun Siswa",
+                        text: "Akun Berhasil Di Simpan!",
+                        type: "success",
                         confirmButtonColor: "#57a94f"
                     });
-                }</script>
-                ');
+                }</script>');
                 // arahkan halaman website ke data pengguna
-                redirect()->to(site_url('pengguna/akun_siswa'));
+                return redirect()->to(site_url('pengguna/akun_siswa'));
             } else {
                 $this->session->setFlashdata('pesan', '
                 <script>window.onload = function() {
@@ -192,7 +214,7 @@ class Pengguna extends BaseController
                     });
                 }</script>
                 ');
-                redirect()->to(site_url('pengguna/akun_siswa'));
+                return redirect()->to(site_url('pengguna/akun_siswa'));
             }
         } else {
             $this->session->setFlashdata('pesan', '<script>window.onload = function() {
@@ -204,6 +226,44 @@ class Pengguna extends BaseController
                 });
             }</script>');
             // Arahkan halaman website jika tidak valid
+            return redirect()->to(site_url('pengguna/akun_siswa'));
+        }
+    }
+    public function blokir_pengguna($IDPengguna)
+    {
+        // blokir akun pengguna
+        $parameters = array(
+            'IDAkun' => decrypt_url($IDPengguna),
+            'Aktivasi' => 'N'
+        );
+        $SQL = $this->MPengguna->save($parameters);
+        if ($SQL) {
+            // simpan log 
+            $aktivitas = '[Info] :' . $this->session->get('NamaLengkap') . ' Telah Memblokir Akun Parameters = ' . json_encode($parameters);
+            $logs = array(
+                'IDAkunAdmin' => $this->session->get('NamaLengkap'),
+                'Waktu' => date('d-F-Y H:i:s'),
+                'Aktivitas' => $aktivitas
+            );
+            $this->MLogs->insert($logs);
+            $this->session->setFlashdata('pesan', '<script>window.onload = function() {
+                swal({
+                    title: "Data Akun Siswa",
+                    text: "Akun Berhasil Di Blokir!",
+                    type: "success",
+                    confirmButtonColor: "#57a94f"
+                });
+            }</script>');
+            return redirect()->to(site_url('pengguna/akun_siswa'));
+        } else {
+            $this->session->setFlashdata('pesan', '<script>window.onload = function() {
+                swal({
+                    title: "Data Akun Siswa",
+                    text: "Akun Gagal Di Blokir!",
+                    type: "error",
+                    confirmButtonColor: "#57a94f"
+                });
+            }</script>');
             return redirect()->to(site_url('pengguna/akun_siswa'));
         }
     }

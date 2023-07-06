@@ -48,8 +48,8 @@
                                     <td><?= $data['Kelas']; ?></td>
                                     <td><?= $data['Jurusan']; ?></td>
                                     <td>
-                                        <a href="<?= site_url('siswa/detil_siswa/'); ?>" title="Detil" class="btn btn-primary btn-sm"><i class="fa fa-clone"></i></a>
-                                        <a href="" title="Edit" class="btn btn-secondary btn-sm"><i class="fa fa-pencil"></i></a>
+                                        <a href="<?= site_url('siswa/detil_siswa/') . encrypt_url($data['NISN']); ?>" title="Detil" class="btn btn-primary btn-sm"><i class="fa fa-clone"></i></a>
+                                        <a href="<?= site_url('siswa/form_siswa/') . encrypt_url('Perbarui') . '/' . encrypt_url($data['NISN']); ?>" title="Edit" class="btn btn-secondary btn-sm"><i class="fa fa-pencil"></i></a>
                                         <a onclick="swal({
                                             title: 'Ingin Menghapus Siswa <?= $data['Nama']; ?> ?',
                                             text: 'Data yang dihapus tidak dapat dikembalikan !',

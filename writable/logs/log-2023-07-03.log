@@ -1,0 +1,56 @@
+CRITICAL - 2023-07-03 21:17:42 --> Undefined array key "NamaLengkap"
+in APPPATH\Controllers\Siswa.php on line 56.
+ 1 APPPATH\Controllers\Siswa.php(56): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "NamaLengkap"', 'APPPATH\\Controllers\\Siswa.php', 56)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Siswa->form_siswa('all1c2NpS2FZODVwR2w2aDZUZE4zUT09', 'bkFmb1I5cmhyR21kL2J0cW5MeS83dz09')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Siswa))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-03 21:18:06 --> Undefined array key "NamaLengkap"
+in APPPATH\Controllers\Siswa.php on line 56.
+ 1 APPPATH\Controllers\Siswa.php(56): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "NamaLengkap"', 'APPPATH\\Controllers\\Siswa.php', 56)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Siswa->form_siswa('all1c2NpS2FZODVwR2w2aDZUZE4zUT09', 'bkFmb1I5cmhyR21kL2J0cW5MeS83dz09')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Siswa))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-03 21:18:11 --> Undefined variable $dt_siswa
+in APPPATH\Controllers\Siswa.php on line 76.
+ 1 APPPATH\Controllers\Siswa.php(76): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $dt_siswa', 'APPPATH\\Controllers\\Siswa.php', 76)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Siswa->form_siswa(' ZnBKWEFrL2VaMFZCWjU5aWdGRHF2Zz09')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Siswa))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-03 21:18:37 --> Undefined array key "Kelas"
+in APPPATH\Controllers\Siswa.php on line 62.
+ 1 APPPATH\Controllers\Siswa.php(62): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "Kelas"', 'APPPATH\\Controllers\\Siswa.php', 62)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Siswa->form_siswa('all1c2NpS2FZODVwR2w2aDZUZE4zUT09', 'bkFmb1I5cmhyR21kL2J0cW5MeS83dz09')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Siswa))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-03 21:33:42 --> Undefined array key "IDKelas"
+in APPPATH\Views\admin\V_Form_siswa.php on line 101.
+ 1 APPPATH\Views\admin\V_Form_siswa.php(101): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "IDKelas"', 'APPPATH\\Views\\admin\\V_Form_siswa.php', 101)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\V_Form_siswa.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('/admin/V_Form_siswa', [], true)
+ 5 APPPATH\Controllers\Siswa.php(89): view('/admin/V_Form_siswa', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Siswa->form_siswa('all1c2NpS2FZODVwR2w2aDZUZE4zUT09', 'OERrU3lSb0hqRUUyNG1hcGxjd0VNdz09')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Siswa))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-03 21:34:03 --> Undefined array key "IDKelas"
+in APPPATH\Views\admin\V_Form_siswa.php on line 92.
+ 1 APPPATH\Views\admin\V_Form_siswa.php(92): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "IDKelas"', 'APPPATH\\Views\\admin\\V_Form_siswa.php', 92)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\V_Form_siswa.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('/admin/V_Form_siswa', [], true)
+ 5 APPPATH\Controllers\Siswa.php(89): view('/admin/V_Form_siswa', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Siswa->form_siswa('all1c2NpS2FZODVwR2w2aDZUZE4zUT09', 'OERrU3lSb0hqRUUyNG1hcGxjd0VNdz09')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Siswa))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')

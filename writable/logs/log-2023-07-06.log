@@ -1,0 +1,190 @@
+CRITICAL - 2023-07-06 18:43:14 --> Undefined array key "NamaLengkap"
+in APPPATH\Views\admin\V_Detil_siswa.php on line 49.
+ 1 APPPATH\Views\admin\V_Detil_siswa.php(49): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "NamaLengkap"', 'APPPATH\\Views\\admin\\V_Detil_siswa.php', 49)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\V_Detil_siswa.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('/admin/V_Detil_siswa', [], true)
+ 5 APPPATH\Controllers\Siswa.php(238): view('/admin/V_Detil_siswa', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Siswa->detil_siswa('OERrU3lSb0hqRUUyNG1hcGxjd0VNdz09')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Siswa))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-06 18:43:21 --> Undefined array key "NamaLengkap"
+in APPPATH\Views\admin\V_Detil_siswa.php on line 49.
+ 1 APPPATH\Views\admin\V_Detil_siswa.php(49): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "NamaLengkap"', 'APPPATH\\Views\\admin\\V_Detil_siswa.php', 49)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\V_Detil_siswa.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('/admin/V_Detil_siswa', [], true)
+ 5 APPPATH\Controllers\Siswa.php(238): view('/admin/V_Detil_siswa', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Siswa->detil_siswa('OERrU3lSb0hqRUUyNG1hcGxjd0VNdz09')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Siswa))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-06 19:02:00 --> Undefined array key "Kelas"
+in APPPATH\Views\admin\V_Detil_siswa.php on line 62.
+ 1 APPPATH\Views\admin\V_Detil_siswa.php(62): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "Kelas"', 'APPPATH\\Views\\admin\\V_Detil_siswa.php', 62)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\V_Detil_siswa.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('/admin/V_Detil_siswa', [], true)
+ 5 APPPATH\Controllers\Siswa.php(236): view('/admin/V_Detil_siswa', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Siswa->detil_siswa('U3dXTk9WTEVhakdGaTVVU2t6b2lhQT09')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Siswa))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-06 19:03:42 --> Undefined array key "TahunAjaran"
+in APPPATH\Views\admin\V_Detil_siswa.php on line 71.
+ 1 APPPATH\Views\admin\V_Detil_siswa.php(71): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "TahunAjaran"', 'APPPATH\\Views\\admin\\V_Detil_siswa.php', 71)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\V_Detil_siswa.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('/admin/V_Detil_siswa', [], true)
+ 5 APPPATH\Controllers\Siswa.php(236): view('/admin/V_Detil_siswa', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Siswa->detil_siswa('U3dXTk9WTEVhakdGaTVVU2t6b2lhQT09')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Siswa))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-06 19:03:44 --> Undefined array key "TahunAjaran"
+in APPPATH\Views\admin\V_Detil_siswa.php on line 71.
+ 1 APPPATH\Views\admin\V_Detil_siswa.php(71): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "TahunAjaran"', 'APPPATH\\Views\\admin\\V_Detil_siswa.php', 71)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\V_Detil_siswa.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('/admin/V_Detil_siswa', [], true)
+ 5 APPPATH\Controllers\Siswa.php(236): view('/admin/V_Detil_siswa', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Siswa->detil_siswa('U3dXTk9WTEVhakdGaTVVU2t6b2lhQT09')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Siswa))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-06 19:04:31 --> Undefined array key "TahunAjaran"
+in APPPATH\Views\admin\V_Detil_siswa.php on line 71.
+ 1 APPPATH\Views\admin\V_Detil_siswa.php(71): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "TahunAjaran"', 'APPPATH\\Views\\admin\\V_Detil_siswa.php', 71)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\V_Detil_siswa.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('/admin/V_Detil_siswa', [], true)
+ 5 APPPATH\Controllers\Siswa.php(236): view('/admin/V_Detil_siswa', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Siswa->detil_siswa('U3dXTk9WTEVhakdGaTVVU2t6b2lhQT09')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Siswa))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-07-06 19:06:06 --> mysqli_sql_exception: Unknown column 't_tahun_jaran.IDTahunAjaran' in 'on clause' in C:\SPPTerpadu\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\SPPTerpadu\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\SPPTerpadu\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\SPPTerpadu\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\SPPTerpadu\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\SPPTerpadu\system\Model.php(182): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\SPPTerpadu\system\BaseModel.php(524): CodeIgniter\Model->doFind(true, '200630')
+#6 C:\SPPTerpadu\app\Controllers\Siswa.php(234): CodeIgniter\BaseModel->find('200630')
+#7 C:\SPPTerpadu\system\CodeIgniter.php(927): App\Controllers\Siswa->detil_siswa('OERrU3lSb0hqRUU...')
+#8 C:\SPPTerpadu\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Siswa))
+#9 C:\SPPTerpadu\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\SPPTerpadu\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\SPPTerpadu\system\Commands\Server\rewrite.php(46): require_once('C:\\SPPTerpadu\\p...')
+#12 {main}
+CRITICAL - 2023-07-06 19:06:06 --> Unknown column 't_tahun_jaran.IDTahunAjaran' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `t_siswa`
+LEFT JOIN `t_kelas` ON `t_kelas`.`IDKelas` = `t_siswa`.`IDKelas`
+LEFT JOIN `t_jurusan` ON `t_jurusan`.`IDJurusan` = `t_siswa`.`IDJurusan`
+LEFT JOIN `t_tahun_ajaran` ON `t_tahun_jaran`.`IDTahunAjaran` = `t_siswa`.`IDTahunAjaran`
+WHERE `t_siswa`.`NISN` = \'200630\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `t_siswa`
+LEFT JOIN `t_kelas` ON `t_kelas`.`IDKelas` = `t_siswa`.`IDKelas`
+LEFT JOIN `t_jurusan` ON `t_jurusan`.`IDJurusan` = `t_siswa`.`IDJurusan`
+LEFT JOIN `t_tahun_ajaran` ON `t_tahun_jaran`.`IDTahunAjaran` = `t_siswa`.`IDTahunAjaran`
+WHERE `t_siswa`.`NISN` = \'200630\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `t_siswa`
+LEFT JOIN `t_kelas` ON `t_kelas`.`IDKelas` = `t_siswa`.`IDKelas`
+LEFT JOIN `t_jurusan` ON `t_jurusan`.`IDJurusan` = `t_siswa`.`IDJurusan`
+LEFT JOIN `t_tahun_ajaran` ON `t_tahun_jaran`.`IDTahunAjaran` = `t_siswa`.`IDTahunAjaran`
+WHERE `t_siswa`.`NISN` = \'200630\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `t_siswa`
+LEFT JOIN `t_kelas` ON `t_kelas`.`IDKelas` = `t_siswa`.`IDKelas`
+LEFT JOIN `t_jurusan` ON `t_jurusan`.`IDJurusan` = `t_siswa`.`IDJurusan`
+LEFT JOIN `t_tahun_ajaran` ON `t_tahun_jaran`.`IDTahunAjaran` = `t_siswa`.`IDTahunAjaran`
+WHERE `t_siswa`.`NISN` = :t_siswa.NISN:', [...], false)
+ 5 SYSTEMPATH\Model.php(182): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(524): CodeIgniter\Model->doFind(true, '200630')
+ 7 APPPATH\Controllers\Siswa.php(234): CodeIgniter\BaseModel->find('200630')
+ 8 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Siswa->detil_siswa('OERrU3lSb0hqRUUyNG1hcGxjd0VNdz09')
+ 9 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Siswa))
+10 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-06 19:14:25 --> Invalid file: error/V_404.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('error/V_404.php')
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('error/V_404', [], true)
+ 3 APPPATH\Config\Routes.php(24): view('error/V_404')
+ 4 SYSTEMPATH\CodeIgniter.php(948): CodeIgniter\CodeIgniter->Config\{closure}('Controller method is not found: hapus_tahun_ajaran')
+ 5 SYSTEMPATH\CodeIgniter.php(370): CodeIgniter\CodeIgniter->display404errors(Object(CodeIgniter\Exceptions\PageNotFoundException))
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-06 21:19:09 --> syntax error, unexpected end of file
+in APPPATH\Views\admin\V_Data_akun_siswa.php on line 81.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/V_Data_akun_siswa', [], true)
+ 3 APPPATH\Controllers\Pengguna.php(91): view('admin/V_Data_akun_siswa', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Pengguna->akun_siswa()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pengguna))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-06 22:38:00 --> Invalid file: error/V_404.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('error/V_404.php')
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('error/V_404', [], true)
+ 3 APPPATH\Config\Routes.php(24): view('error/V_404')
+ 4 SYSTEMPATH\CodeIgniter.php(948): CodeIgniter\CodeIgniter->Config\{closure}('Controller or its method is not found: \\App\\Controllers\\Logs::siswa')
+ 5 SYSTEMPATH\CodeIgniter.php(370): CodeIgniter\CodeIgniter->display404errors(Object(CodeIgniter\Exceptions\PageNotFoundException))
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-06 23:02:17 --> Invalid file: error/V_404.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('error/V_404.php')
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('error/V_404', [], true)
+ 3 APPPATH\Config\Routes.php(24): view('error/V_404')
+ 4 SYSTEMPATH\CodeIgniter.php(948): CodeIgniter\CodeIgniter->Config\{closure}('Controller method is not found: blokir_administrator')
+ 5 SYSTEMPATH\CodeIgniter.php(370): CodeIgniter\CodeIgniter->display404errors(Object(CodeIgniter\Exceptions\PageNotFoundException))
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-06 23:22:06 --> Trying to access array offset on value of type null
+in APPPATH\Views\admin\V_Form_akun_siswa.php on line 41.
+ 1 APPPATH\Views\admin\V_Form_akun_siswa.php(41): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\admin\\V_Form_akun_siswa.php', 41)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\V_Form_akun_siswa.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('/admin/V_Form_akun_siswa', [], true)
+ 5 APPPATH\Controllers\Pengguna.php(124): view('/admin/V_Form_akun_siswa', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Pengguna->form_akun_siswa('all1c2NpS2FZODVwR2w2aDZUZE4zUT09', 'YXM0czhaSTRhTkJrY3ZzcEZBcno2Zz09')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pengguna))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-06 23:25:50 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Pengguna.php on line 107.
+ 1 APPPATH\Controllers\Pengguna.php(107): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Pengguna.php', 107)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Pengguna->form_akun_siswa('all1c2NpS2FZODVwR2w2aDZUZE4zUT09', 'YXM0czhaSTRhTkJrY3ZzcEZBcno2Zz09')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pengguna))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-06 23:26:28 --> Undefined array key "KataSandi"
+in APPPATH\Views\admin\V_Form_akun_siswa.php on line 53.
+ 1 APPPATH\Views\admin\V_Form_akun_siswa.php(53): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "KataSandi"', 'APPPATH\\Views\\admin\\V_Form_akun_siswa.php', 53)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\V_Form_akun_siswa.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('/admin/V_Form_akun_siswa', [], true)
+ 5 APPPATH\Controllers\Pengguna.php(129): view('/admin/V_Form_akun_siswa', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Pengguna->form_akun_siswa('all1c2NpS2FZODVwR2w2aDZUZE4zUT09', 'YXM0czhaSTRhTkJrY3ZzcEZBcno2Zz09')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pengguna))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')

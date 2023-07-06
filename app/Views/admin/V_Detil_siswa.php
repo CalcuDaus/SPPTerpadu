@@ -28,7 +28,8 @@
                         <div class="tabs-menu ">
                             <!-- Tabs -->
                             <ul class="nav panel-tabs">
-                                <li class=""><a href="#biodata" class="active" data-bs-toggle="tab"> <i class="fa fa-user"></i> Biodata</a></li>
+                                <li class=""><a href="#biodata" class="active" data-bs-toggle="tab"> <i
+                                            class="fa fa-user"></i> Biodata</a></li>
                                 <li><a href="#spp" data-bs-toggle="tab"> Tagihan SPP</a></li>
                                 <li><a href="#lainnya" data-bs-toggle="tab"> Tagihan Lainnya</a></li>
                             </ul>
@@ -41,31 +42,33 @@
                                     <table class="table table-striped">
                                         <tr>
                                             <td width="200px">NISN</td>
-                                            <td>102149</td>
+                                            <td><?= $dt_siswa['NISN']; ?></td>
                                         </tr>
                                         <tr>
                                             <td>Nama Lengkap</td>
-                                            <td>Agus Suparto</td>
+                                            <td><?= $dt_siswa['Nama']; ?></td>
                                         </tr>
                                         <tr>
                                             <td>Tempat Tanggal Lahir</td>
-                                            <td>Medan, 17 Juli 2000</td>
+                                            <td><?= $dt_siswa['TempatLahir']; ?>,
+                                                <?= date_change($dt_siswa['TanggalLahir']); ?></td>
                                         </tr>
                                         <tr>
                                             <td>Agama & Jenis Kelamin</td>
-                                            <td>Islam, Laki-Laki</td>
+                                            <td><?= $dt_siswa['Agama']; ?>, <?= $dt_siswa['JenisKelamin']; ?></td>
                                         </tr>
                                         <tr>
                                             <td>Kelas & Jurusan</td>
-                                            <td>XI RPL</td>
+                                            <td><?= $dt_siswa['Kelas']; ?> <?= $dt_siswa['Jurusan']; ?></td>
                                         </tr>
                                         <tr>
                                             <td>Alamat</td>
-                                            <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo ab quidem labore dignissimos odio perferendis aliquid accusamus ipsum! Nam eos quasi sed libero quibusdam reprehenderit autem id commodi, amet maxime.</td>
+                                            <td><?= $dt_siswa['Alamat']; ?>
+                                            </td>
                                         </tr>
                                         <tr>
                                             <td>Tahun Ajaran</td>
-                                            <td>2023/2024</td>
+                                            <td><?= $dt_siswa['TahunAjaran']; ?></td>
                                         </tr>
                                     </table>
                                 </div>
@@ -111,7 +114,8 @@
                         </div>
                     </div>
                 </div>
-                <button class="btn btn-warning btn-sm mt-3" type="button" onclick="window.history.back();"><i class="fa fa-reply"></i> Kembali</button>
+                <button class="btn btn-warning btn-sm mt-3" type="button" onclick="window.history.back();"><i
+                        class="fa fa-reply"></i> Kembali</button>
             </div>
             <div class="card-footer">
                 <p class="text-muted"><i class="fa fa-desktop"></i> Aplikasi Pembayaran SPP Terpadu</p>

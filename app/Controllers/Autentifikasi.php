@@ -27,8 +27,6 @@ class Autentifikasi extends BaseController
 
     public function validasi_login_admin()
     {
-
-        
         // Tetapkan aturan dalam validasi
         $this->validation->setRules(
             [
@@ -102,7 +100,7 @@ class Autentifikasi extends BaseController
 
     public function logout($status = null)
     {
-        // Tutup semua session dan kembali kehalaman login
+        // Tutup semua session dan kembali kehalaman login 
         if (decrypt_url($status) == 'LoggedAdmin') {
             $this->session->destroy();
             return redirect()->to(site_url('login/admin'));
