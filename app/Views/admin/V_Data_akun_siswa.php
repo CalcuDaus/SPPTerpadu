@@ -59,9 +59,37 @@
                                             <?= $teks; ?></span>
                                     </td>
                                     <td>
-                                        <a href="<?= site_url('pengguna/blokir_pengguna/') . encrypt_url($dt_akun['IDAkun']); ?>" title="Blokir" class="btn btn-warning btn-sm"><i class="fa fa-lock"></i></a>
+                                        <?php
+                                        if ($dt_akun['Aktivasi'] == 'Y') {
+                                        ?>
+                                            <a href="<?= site_url('pengguna/blokir_pengguna/') . encrypt_url($dt_akun['IDAkun']) . '/' . encrypt_url('Blokir'); ?>" title="Blokir" class="btn btn-warning btn-sm"><i class="fa fa-lock"></i></a>
+                                        <?php
+                                        } else {
+                                        ?>
+                                            <a href="<?= site_url('pengguna/blokir_pengguna/') . encrypt_url($dt_akun['IDAkun']) . '/' . encrypt_url('bukaBlokir'); ?>" title="Aktifkan" class="btn btn-success btn-sm"><i class="fa fa-check"></i></a>
+                                        <?php
+                                        }
+                                        ?>
                                         <a href="<?= site_url('pengguna/form_akun_siswa/') . encrypt_url('Perbarui') . '/' . encrypt_url($dt_akun['IDAkun']); ?>" title="Edit" class="btn btn-secondary btn-sm"><i class="fa fa-pencil"></i></a>
-                                        <a href="" title="Hapus" class="btn btn-danger btn-sm"><i class="fa fa-times"></i></a>
+                                        <a onclick="swal({
+                                            title: 'Ingin Menghapus Siswa <?= $dt_akun['NamaPengguna']; ?> ?',
+                                            text: 'Data yang dihapus tidak dapat dikembalikan !',
+                                            type: 'warning',
+                                            showCancelButton: true,
+                                            confirmButtonClass: 'btn-danger',
+                                            confirmButtonText: 'Ya, Hapus',
+                                            cancelButtonText: 'Tidak, Batalkan Hapus',
+                                            closeOnConfirm: false,
+                                            closeOnCancel: false
+                                            },
+                                            function(isConfirm) {
+                                            if (isConfirm) {
+                                                document.location = '<?= base_url('pengguna/hapus_pengguna'); ?>/<?php echo encrypt_url($dt_akun['IDAkun']); ?>';
+                                                swal('Pengguna', 'Pengguna Berhasil Dihapus !.', 'success');
+                                            } else {
+                                                swal('Pengguna', 'Pengguna Batal Dihapus !', 'error');
+                                            }
+                                            });" href="#" title="Hapus" class="btn btn-danger btn-sm"><i class="fa fa-times"></i></a>
                                     </td>
                                 </tr>
                             <?php endforeach; ?>

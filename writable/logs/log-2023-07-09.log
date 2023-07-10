@@ -1,0 +1,9 @@
+CRITICAL - 2023-07-09 00:53:02 --> syntax error, unexpected variable "$param_aktivitas"
+in APPPATH\Controllers\Pengguna.php on line 159.
+ 1 SYSTEMPATH\Router\Router.php(499): CodeIgniter\Router\AutoRouter->getRoute('pengguna/form_akun_siswa/ZnBKWEFrL2VaMFZCWjU5aWdGRHF2Zz09')
+ 2 SYSTEMPATH\Router\Router.php(205): CodeIgniter\Router\Router->autoRoute('pengguna/form_akun_siswa/ZnBKWEFrL2VaMFZCWjU5aWdGRHF2Zz09')
+ 3 SYSTEMPATH\CodeIgniter.php(802): CodeIgniter\Router\Router->handle('pengguna/form_akun_siswa/ZnBKWEFrL2VaMFZCWjU5aWdGRHF2Zz09')
+ 4 SYSTEMPATH\CodeIgniter.php(430): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')

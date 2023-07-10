@@ -703,7 +703,7 @@ class Siswa extends BaseController
     {
         $this->MTahunAjaran->delete(decrypt_url($parameter));
         // simpan aktivitas pengguna 
-        $aktivitas = '[Info] :' . $this->session->get('NamaLengkap') . ' Telah Menghapus Tahun Ajaran Pada Tanggal ' . date('d-F-Y H:i:s');
+        $aktivitas = '[Info] : ' . $this->session->get('NamaLengkap') . ' Telah Menghapus Tahun Ajaran Pada Tanggal ' . date('d-F-Y H:i:s');
         $logs = array(
             'IDAkunAdmin' => $this->session->get('IDAkunAdmin'),
             'Waktu' => date('Y-m-d H:i:s'),

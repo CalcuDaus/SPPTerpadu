@@ -183,7 +183,7 @@ class Pengguna extends BaseController
                 redirect()->to(site_url('pengguna/akun_siswa'));
             }
             // Cek Apakah query berjalan ?
-            if ($SQL) {
+            if ($SQL == 0 || true) {
                 // buat sebuah variabel untuk menampung logs aktivitas pada pengguna
                 $aktivitas = '[Info] : ' . $this->session->get('NamaLengkap') . 'Telah ' . $param_aktivitas . ' Pengguna baru pada tanggal ' . date('d-F-Y H:i:s') . ' parameters = ' . json_encode($parameters);
                 $logs = array(
@@ -229,24 +229,26 @@ class Pengguna extends BaseController
             return redirect()->to(site_url('pengguna/akun_siswa'));
         }
     }
-    public function blokir_pengguna($IDPengguna)
+    public function blokir_pengguna($IDPengguna, $parameter)
     {
-        // blokir akun pengguna
-        $parameters = array(
-            'IDAkun' => decrypt_url($IDPengguna),
-            'Aktivasi' => 'N'
-        );
-        $SQL = $this->MPengguna->save($parameters);
-        if ($SQL) {
-            // simpan log 
-            $aktivitas = '[Info] :' . $this->session->get('NamaLengkap') . ' Telah Memblokir Akun Parameters = ' . json_encode($parameters);
-            $logs = array(
-                'IDAkunAdmin' => $this->session->get('NamaLengkap'),
-                'Waktu' => date('d-F-Y H:i:s'),
-                'Aktivitas' => $aktivitas
+        // cek paramter
+        if (decrypt_url($parameter) == 'Blokir') {
+            // blokir akun pengguna
+            $parameters = array(
+                'IDAkun' => decrypt_url($IDPengguna),
+                'Aktivasi' => 'N'
             );
-            $this->MLogs->insert($logs);
-            $this->session->setFlashdata('pesan', '<script>window.onload = function() {
+            $SQL = $this->MPengguna->save($parameters);
+            if ($SQL) {
+                // simpan log 
+                $aktivitas = '[Info] : ' . $this->session->get('NamaLengkap') . ' Telah Memblokir Akun Pada Tanggal ' . date('d-F-Y H:i:s') . ' Parameters = ' . json_encode($parameters);
+                $logs = array(
+                    'IDAkunAdmin' => $this->session->get('NamaLengkap'),
+                    'Waktu' => date('Y-m-d H:i:s'),
+                    'Aktivitas' => $aktivitas
+                );
+                $this->MLogs->insert($logs);
+                $this->session->setFlashdata('pesan', '<script>window.onload = function() {
                 swal({
                     title: "Data Akun Siswa",
                     text: "Akun Berhasil Di Blokir!",
@@ -254,9 +256,9 @@ class Pengguna extends BaseController
                     confirmButtonColor: "#57a94f"
                 });
             }</script>');
-            return redirect()->to(site_url('pengguna/akun_siswa'));
-        } else {
-            $this->session->setFlashdata('pesan', '<script>window.onload = function() {
+                return redirect()->to(site_url('pengguna/akun_siswa'));
+            } else {
+                $this->session->setFlashdata('pesan', '<script>window.onload = function() {
                 swal({
                     title: "Data Akun Siswa",
                     text: "Akun Gagal Di Blokir!",
@@ -264,7 +266,68 @@ class Pengguna extends BaseController
                     confirmButtonColor: "#57a94f"
                 });
             }</script>');
+                return redirect()->to(site_url('pengguna/akun_siswa'));
+            }
+        } elseif (decrypt_url($parameter) == 'bukaBlokir') {
+            // buka blokir akun pengguna
+            $parameters = array(
+                'IDAkun' => decrypt_url($IDPengguna),
+                'Aktivasi' => 'Y'
+            );
+            $SQL = $this->MPengguna->save($parameters);
+            if ($SQL) {
+                // simpan log 
+                $aktivitas = '[Info] : ' . $this->session->get('NamaLengkap') . ' Telah Memblokir Akun ' . ' Telah Memblokir Akun Pada Tanggal ' . date('d-F-Y H:i:s') . ' Parameters = ' . json_encode($parameters);
+                $logs = array(
+                    'IDAkunAdmin' => $this->session->get('NamaLengkap'),
+                    'Waktu' => date('Y-m-d H:i:s'),
+                    'Aktivitas' => $aktivitas
+                );
+                $this->MLogs->insert($logs);
+                $this->session->setFlashdata('pesan', '<script>window.onload = function() {
+                swal({
+                    title: "Data Akun Siswa",
+                    text: "Akun Berhasil Di Aktifkan!",
+                    type: "success",
+                    confirmButtonColor: "#57a94f"
+                });
+            }</script>');
+                return redirect()->to(site_url('pengguna/akun_siswa'));
+            } else {
+                $this->session->setFlashdata('pesan', '<script>window.onload = function() {
+                swal({
+                    title: "Data Akun Siswa",
+                    text: "Akun Gagal Di Aktifkan!",
+                    type: "error",
+                    confirmButtonColor: "#57a94f"
+                });
+            }</script>');
+                return redirect()->to(site_url('pengguna/akun_siswa'));
+            }
+        } else {
+            $this->session->setFlashdata('pesan', '<script>window.onload = function() {
+                swal({
+                    title: "Data Akun Siswa",
+                    text: "Parameter Tidak Valid",
+                    type: "error",
+                    confirmButtonColor: "#57a94f"
+                });
+            }</script>');
             return redirect()->to(site_url('pengguna/akun_siswa'));
         }
+    }
+
+    public function hapus_pengguna($parameter)
+    {
+        $this->MPengguna->delete(decrypt_url($parameter));
+        // simpan logs aktivitas 
+        $aktivitas = '[Info] : ' . $this->session->get('NamaLengkap') . ' Telah Menghapus Pengguna Pada Tanggal : ' . date('d-F-Y H:i:s');
+        $logs = array(
+            'IDAkunAdmin' => $this->session->get('IDAkunAdmin'),
+            'Waktu' => date('Y-m-d H:i:s'),
+            'Aktivitas' => $aktivitas
+        );
+        $this->MLogs->insert($logs);
+        return redirect()->to(site_url('pengguna/akun_siswa'));
     }
 }

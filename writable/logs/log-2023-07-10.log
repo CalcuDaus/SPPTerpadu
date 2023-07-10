@@ -1,0 +1,103 @@
+CRITICAL - 2023-07-10 23:20:33 --> Invalid file: error/V_404.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('error/V_404.php')
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('error/V_404', [], true)
+ 3 APPPATH\Config\Routes.php(24): view('error/V_404')
+ 4 SYSTEMPATH\CodeIgniter.php(948): CodeIgniter\CodeIgniter->Config\{closure}('Controller or its method is not found: \\App\\Controllers\\Aplikasi::konfigurasi')
+ 5 SYSTEMPATH\CodeIgniter.php(370): CodeIgniter\CodeIgniter->display404errors(Object(CodeIgniter\Exceptions\PageNotFoundException))
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-10 23:24:36 --> Invalid file: error/V_404.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('error/V_404.php')
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('error/V_404', [], true)
+ 3 APPPATH\Config\Routes.php(24): view('error/V_404')
+ 4 SYSTEMPATH\CodeIgniter.php(948): CodeIgniter\CodeIgniter->Config\{closure}('Controller or its method is not found: \\App\\Controllers\\Logs::siswa')
+ 5 SYSTEMPATH\CodeIgniter.php(370): CodeIgniter\CodeIgniter->display404errors(Object(CodeIgniter\Exceptions\PageNotFoundException))
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-10 23:28:16 --> Invalid file: error/V_404.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('error/V_404.php')
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('error/V_404', [], true)
+ 3 APPPATH\Config\Routes.php(24): view('error/V_404')
+ 4 SYSTEMPATH\CodeIgniter.php(948): CodeIgniter\CodeIgniter->Config\{closure}('Controller method is not found: admin')
+ 5 SYSTEMPATH\CodeIgniter.php(370): CodeIgniter\CodeIgniter->display404errors(Object(CodeIgniter\Exceptions\PageNotFoundException))
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-10 23:29:56 --> Invalid file: admin/V_logs_admin.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/V_logs_admin.php')
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/V_logs_admin', [], true)
+ 3 APPPATH\Controllers\Logs.php(12): view('admin/V_logs_admin', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Logs->admin()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Logs))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-10 23:35:27 --> Invalid file: error/V_404.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('error/V_404.php')
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('error/V_404', [], true)
+ 3 APPPATH\Config\Routes.php(24): view('error/V_404')
+ 4 SYSTEMPATH\CodeIgniter.php(948): CodeIgniter\CodeIgniter->Config\{closure}('Controller method is not found: siswa')
+ 5 SYSTEMPATH\CodeIgniter.php(370): CodeIgniter\CodeIgniter->display404errors(Object(CodeIgniter\Exceptions\PageNotFoundException))
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-10 23:35:32 --> Invalid file: error/V_404.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('error/V_404.php')
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('error/V_404', [], true)
+ 3 APPPATH\Config\Routes.php(24): view('error/V_404')
+ 4 SYSTEMPATH\CodeIgniter.php(948): CodeIgniter\CodeIgniter->Config\{closure}('Controller method is not found: siswa')
+ 5 SYSTEMPATH\CodeIgniter.php(370): CodeIgniter\CodeIgniter->display404errors(Object(CodeIgniter\Exceptions\PageNotFoundException))
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-10 23:35:36 --> Undefined variable $status_form
+in APPPATH\Views\admin\V_logs_admin.php on line 2.
+ 1 APPPATH\Views\admin\V_logs_admin.php(2): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $status_form', 'APPPATH\\Views\\admin\\V_logs_admin.php', 2)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\V_logs_admin.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/V_logs_admin', [], true)
+ 5 APPPATH\Controllers\Logs.php(12): view('admin/V_logs_admin', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Logs->admin()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Logs))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-10 23:35:59 --> Undefined variable $status_form
+in APPPATH\Views\admin\V_logs_admin.php on line 2.
+ 1 APPPATH\Views\admin\V_logs_admin.php(2): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $status_form', 'APPPATH\\Views\\admin\\V_logs_admin.php', 2)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\V_logs_admin.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/V_logs_admin', [], true)
+ 5 APPPATH\Controllers\Logs.php(12): view('admin/V_logs_admin', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Logs->admin()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Logs))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-10 23:36:01 --> Undefined variable $status_form
+in APPPATH\Views\admin\V_logs_admin.php on line 2.
+ 1 APPPATH\Views\admin\V_logs_admin.php(2): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $status_form', 'APPPATH\\Views\\admin\\V_logs_admin.php', 2)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\V_logs_admin.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/V_logs_admin', [], true)
+ 5 APPPATH\Controllers\Logs.php(12): view('admin/V_logs_admin', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Logs->admin()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Logs))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-07-10 23:39:28 --> Undefined variable $status_form
+in APPPATH\Views\admin\V_logs_admin.php on line 22.
+ 1 APPPATH\Views\admin\V_logs_admin.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $status_form', 'APPPATH\\Views\\admin\\V_logs_admin.php', 22)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\V_logs_admin.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admin/V_logs_admin', [], true)
+ 5 APPPATH\Controllers\Logs.php(12): view('admin/V_logs_admin', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Logs->admin()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Logs))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
